@@ -19,7 +19,7 @@ def scaled_list(a,s):
             a[i][j] *= s
             
 # reading the values in the file NumbersList.txt into a two dimensional array
-with open('NumbersList.txt') as file:
+with open('09.03 NumbersList.txt') as file:
     lines = file.readlines()
     list_nums = []   # a two dimensional array
     for lin in lines:

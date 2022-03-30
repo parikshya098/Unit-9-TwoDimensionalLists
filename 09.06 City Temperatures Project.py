@@ -1,5 +1,5 @@
 # Using readline()
-file1 = open('CityTemps.txt', 'r')
+file1 = open('09.06 CityTemps.txt', 'r')
 count = 0
 temps = []
 while True:
