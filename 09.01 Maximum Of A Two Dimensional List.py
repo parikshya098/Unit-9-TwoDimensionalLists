@@ -21,4 +21,4 @@ for i in range(m):
             curr_max = a[i][j]
             best_i = i
             best_j = j
-print("The Maximum Value {} occurred in row {} column {}".format(curr_max,best_i,best_j)) 
+print("The maximum value {} occurred in row {} column {}".format(curr_max,best_i,best_j)) 
