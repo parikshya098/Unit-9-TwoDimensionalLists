@@ -1,65 +1,24 @@
-print("Enter the number of rows and columns:")
-
-m = int(input());
-
-n = int(input());
-
-# matrix
-
-matrix = [];
-
-# take input for matrix
-
-for i in range(m):          
-
-    l = [];
-
-    print("Enter a line of data:");
-
-    for j in range(n):      
-
-        l.append(int(input()));
-
-    matrix.append(l);
-
-# print matrix    
-
-for i in range(m):          
-
-    for j in range(n):      
-
-        print(matrix[i][j],end = " ");
-
-    print();
-
-# find max in matrix
-
-max = 0;
-
-for i in range(m):          
-
-    for j in range(n):  
-
-        if max < matrix[i][j]:
-
-            max = matrix[i][j];
-
-# print max
-
-a = 0;
-
-b = 0;
-
-for i in range(m):          
-
-    for j in range(n):  
-
-        if max == matrix[i][j]:
-
-            a = i;
-
-            b = j;
-
-            print("The maximum value",max,"occurred in row",a,"column",b);
-
-            break;
+dataline = input("Enter the number of rows and columns: ").split()
+m = int(dataline[0])
+n = int(dataline[1])
+a = []
+for i in range(m):
+ a.append([0] * n)
+for i in range(m):
+    dataline= input("Enter a line of a data: ").split() 
+    for j in range(n):
+        a[i][j] = int(dataline[j])
+for i in range (len(a)):
+    for j in range(len(a[i])):
+     print(a[i][j],end = '') 
+    print() 
+best_i = 0
+best_j = 0
+curr_max = a[0][0]   
+for i in range(m):
+    for j in range(n):
+        if a[i][j] > curr_max:
+            curr_max = a[i][j]
+            best_i = i
+            best_j = j
+print("The Maximum Value {} occurred in row {} column {}".format(curr_max,best_i,best_j)) 
