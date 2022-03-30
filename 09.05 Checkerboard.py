@@ -30,7 +30,7 @@ for i in range(1, size-1):
                     column.append(' ')
     l.append(column)
 l.append(find_row(size))
-print(l)
+
 o = ""
 for i in range(size):
     o += ''.join(l[i])
