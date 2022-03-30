@@ -14,7 +14,7 @@ for car in data:
 averageprice = price / count         
 print("{:>5} Total Cars - Average Price: ${}".format(count,round(averageprice)))    
 
-car_make = input("Enter Car Make: ")   
+car_make = input("Enter Car Make: ")  
 while(car_make != ""): 
         currentcount = 0        
         currentprice = 0       
