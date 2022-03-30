@@ -1,25 +1,25 @@
-import os#importing os module
-def print_list(a):#defining print_list function
-   for i in range(len(a)):#for loop till length of a
-       for j in range(len(a[i])):#for loop till length of a[i]
-                      print(a[i][j],end=' ')#printing a[i][j]
-       print('\n')#printing new line
-def swap_columns(a,i,j):#definition function swap_columns
-   for k in range(len(a)):#loop till length of a
-       l=a[k][i]#storing a[k][i] in l
-       a[k][i]=a[k][j]#storing a[k][j] in a[k][i]
-       a[k][j]=l#changing a[k][j] with l
-k=open('09.02 NumbersList.txt')#opening the file
-a=k.readlines()#reading all the lines
-a=''.join(a)#joining the list
-a=a.split('\n')#spliting with '\n'
-for i in range(len(a)):#for loop till length of a
-   a[i]=a[i].split(' ')#spliting the a[i] with space
-   a[i]=map(int,a[i])#making each element of a[i] as int
-   a[i]=list(a[i])#getting list of mapped function
-print_list(a)#calling print_list function 
-i,j=input('Enter the columns to swap: ').split()#asking user for columns
-i=int(i)#converting to int
-j=int(j)#converting to int
-swap_columns(a,i,j)#calling swap_columns function 
-print_list(a)#calling print_list function
+import os
+def print_list(a):
+   for i in range(len(a)):
+       for j in range(len(a[i])):
+                      print(a[i][j],end=' ') 
+       print('\n')
+def swap_columns(a,i,j):
+   for k in range(len(a)):
+       l=a[k][i]
+       a[k][i]=a[k][j]
+       a[k][j]=l
+k=open('09.02 NumbersList.txt')
+a=k.readlines()
+a=''.join(a)
+a=a.split('\n')
+for i in range(len(a)):
+   a[i]=a[i].split(' ')
+   a[i]=map(int,a[i])
+   a[i]=list(a[i])
+print_list(a)
+i,j=input('Enter the columns to swap: ').split()
+i=int(i)
+j=int(j)
+swap_columns(a,i,j)
+print_list(a)
